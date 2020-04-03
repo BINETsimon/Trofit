@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Trofit</title>
+    </head>
+    <body>
+      <div id="loader" style="z-index: 100;"> 
+        <img src="./media/img/Logo.png">
+        <h1>TROFIT</h1>
+        <div id="loading">
+          <div id="prgBar"></div>
+        </div>
+      </div>
+        <div id="Menu">
+          <img src="./media/img/tete_tchilly.png" id="menuLogo">
+          <ul>
+            <li id="MenuAcceuil" onclick="slideMenu('MenuAcceuil')">Accueil</li>
+            <li id="MenuProfil" onclick="slideMenu('MenuProfil')">Profil</li>
+            <li id="MenuPlanning" onclick="slideMenu('MenuPlanning')">Planning</li>
+            <li id="MenuExercices" onclick="slideMenu('MenuExercices')">Exercices</li>
+            <li id="MenuSucces" onclick="slideMenu('MenuSucces')">Succès</li>
+          </ul>
+        </div>
+      <header>
+        <h1 id="Title">Trofit</h1>
+        <div id="burger" onclick="burger()">
+          <div class="Bu" id="B1"></div>
+          <div class="Bu" id="B2"></div>
+          <div class="Bu" id="B3"></div>
+        </div>
+      </header>
+      <main>
+
+        <!-- Acceuil -->
+        <div class="container" id="container_MenuAcceuil" style="display: none;">
+          <div id="TchillyAcceuil">
+            <div id="circleArround">
+              <img src="./media/img/tete_tchilly.png"> 
+            </div>
+            <div id="TchillySays">
+              <p>Bonjour, Moi c'est Tchilly, je fais de la corde à sauter</p>
+            </div>
+            <div id="leftBuble"></div>
+          </div>
+          
+          <button id="sceance" onclick=" ">
+            <div class="bandeau">prochaine sceance</div>
+            <h2>Fessier</h2>
+            <span class="time">20 min</span>
+            <h2 style="margin-top: 20px;">GO !</h2>
+          </button>
+
+          <button id="planning" onclick="slideMenu('MenuPlanning')">
+            <h2>Planning</h2>
+          </button>
+          <div id="succes">
+            <h3>Les succès :</h3></br>
+            <div class="list-succes">
+              <h3>X</h3>
+              <h3>faire 200 pompes</h3>
+              <span class="pourcent">80%</span>
+            </div>
+            <div class="list-succes">
+              <h3>X</h3>
+              <h3>finaliser 5 programmes</h3>
+              <span class="pourcent">20%</span>
+            </div>
+            <div class="list-succes">
+              <h3>X</h3>
+              <h3>faire 200 pompes</h3>
+              <span class="pourcent">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- profil -->
+        <div class="container" id="container_MenuProfil" style="display: none;">
+          <img src="./media/img/tete_tchilly.png"> 
+          <div id="infoUtil">
+            <h3 id="TailleValue">Taille : 180</h3><h3 id="PoidsValue">Poids : 60kg</h3><h3>Succès : 5/88</h3>
+          </div>
+          <div id="infoUtilmodif" style="display: none;">
+            <input type="number" id='taille' placeholder="taille">
+            <input type="number" id='poids' placeholder="poids"> 
+          </div>
+          <button id="modifierBtn" onclick="modifUtil()">modifier</button>
+          <h2 style="color: white;">Préférences</h2>
+          <div id="preferences">
+            <button class="preferenceExo" onclick="changePref(0)">Haut</button>
+            <button class="preferenceExo" onclick="changePref(1)">Tronc</button>
+            <button class="preferenceExo" onclick="changePref(2)">Bas</button>
+            <button class="preferenceExo" onclick="changePref(3)">Jogging</button>
+          </div>
+        </div>
+
+        <!-- planning -->
+        <div id="backplanning" class="backdrop">
+          <div class="Backcircleplan">
+            <img src="./media/img/icons/exercise.png">
+          </div>
+          <div class="Backcircleplan">
+            <img src="./media/img/icons/exercise.png">
+          </div>
+          <div class="Backcircleplan">
+            <img src="./media/img/icons/exercise.png">
+          </div>
+        </div>
+        <div class="container" id="container_MenuPlanning" style="display: none;">
+          <button id="plus" onclick="addNewExo()">
+            <div id="cross">
+              <div id="cross1"></div>
+              <div id="cross2"></div>
+            </div>
+            <div id="plusCount" style="display:none;">
+              <img src="./media/img/icons/exercise.png"><span id="nombreExo"> x 3</span>
+            </div>
+          </button>
+          <button class="dayPlannig" id="lundi" onclick="addDay('lundi')">
+            <h2>LUN</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </button>
+          <button class="dayPlannig" id="mardi" onclick="addDay('mardi')">
+            <h2>MAR</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </button>
+          <button class="dayPlannig" id="mercredi" onclick="addDay('mercredi')">
+            <h2>MER</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </button>
+          <button class="dayPlannig" id="jeudi" onclick="addDay('jeudi')">
+            <h2>JEU</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </button>
+          <button class="dayPlannig" id="vendredi" onclick="addDay('vendredi')">
+            <h2>VEN</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </button>
+          <button class="dayPlannig" id="samedi" onclick="addDay('samedi')">
+            <h2>SAM</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </button>
+          <button class="dayPlannig" id="dimanche" onclick="addDay('dimanche')">
+            <h2>DIM</h2>
+            <div class="containerplan">
+              <div class="circleplan" style="display:none;">
+                <img src="./media/img/icons/exercise.png">
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <!-- exercices -->
+        <div class="container" id="container_MenuExercices" style="display: none;">
+          <div id="ExoPagePrincipale">
+            <button class="Exercices">BRAS</button>
+            <button class="Exercices">ABDOS</button>
+            <button class="Exercices">FESSIERS</button>
+            <button class="Exercices">JOGGING</button>
+            <button id="lastExos">Tous les exercices débloqués</button>
+          </div>
+        </div>
+
+        <!-- Succes -->
+        <div class="container" id="container_MenuSucces" style="display: none;">
+          
+        </div>
+      </main>
+    </body>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</html>

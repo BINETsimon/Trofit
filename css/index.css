@@ -1,0 +1,522 @@
+@font-face{
+    font-family: "Dosis";
+    src: url("../media/fonts/Dosis-Medium.ttf");
+}
+@font-face{
+    font-family: "Dosis-Light";
+    src: url("../media/fonts/Dosis-ExtraLight.ttf");
+}
+
+@font-face{
+    font-family: "Dosis-Bold";
+    src: url("../media/fonts/Dosis-ExtraBold.ttf");
+}
+
+
+html{
+    background-color: #29201B;
+    margin: 0;
+    color: #33FF68;
+    font-family: "Dosis-Light";
+}
+
+/* LOADER */
+#loader{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    background-color: #33FF68;
+    color: #29201B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+}
+#loader h1{
+    font-family: "Dosis";
+    color: #29201B;
+    margin-bottom: 50px;
+}
+#loader img{
+    width: 70%;
+}
+#loading{
+    width: 60%; 
+    height: 15px;
+    border: 1px solid #29201B;
+    border-radius: 5px;
+}
+#prgBar{
+    background-color: #29201B;
+    height: 15px;
+    animation: loading 3s ease;
+}
+
+@keyframes loading{
+    from{ width: 0;}
+    to{ width: 100%;}
+}
+
+/* APP */
+body{
+    margin: 0;
+}
+.template{
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    width: 80%;
+    border: 2px solid #33FF68;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #33FF68;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+.btn-high{
+    border-radius: 100px;
+    background-color: #33FF68;
+    color: #29201B;
+    font-weight: bold;
+}
+
+h1{
+    margin: 0;
+    font-size: 40px;
+    font-family: "Dosis-Bold";
+}
+h2{
+    margin: 0;
+    font-size: 30px;
+    font-family: "Dosis-Light";
+}
+h3{
+    margin: 0;
+    color: white;
+}
+
+.exercices{
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 10px 0;
+    border: 1px white solid;
+    border-radius: 200px;
+    display: flex;
+}
+
+
+/* HEADER */
+
+header{
+    width: calc(100vw - 40px);
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#burger{ 
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;   
+    z-index: 1001;
+    transition: 0.8s ease;
+}
+
+.Bu{
+    margin: 3px auto;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #33FF68;
+    transition: 0.8s ease;
+}
+
+
+#Menu{
+    right: -100vw;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #33FF68;
+    transition: 0.8s ease;
+    display: flex;
+    z-index: 100;
+}
+#Menu img{
+    position: absolute;
+    width: 50px;
+    left: 10px;
+    top: 10px;
+    background-color: #29201B;
+    border-radius: 50%;
+    opacity: 0;
+}
+#Menu ul{
+    height: 60%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#Menu li{
+    color: #29201B;
+    font-size: 2em;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.8s ease;
+    font-family: "Dosis";
+}
+
+/* container */
+.container{
+    width: 100vw;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ACCEUIL */
+#TchillyAcceuil{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: -10;
+}
+
+#circleArround{
+    height: 60px;
+    border: 6px solid #29201B;
+    background-color: #29201B;
+    border-radius: 50%;
+    display: flex;
+}
+
+#TchillyAcceuil img{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #FFD584;
+    border-radius: 50%;
+}
+#TchillySays{
+    background-color: #FFD584;
+    border-radius: 0 20px 20px 20px;
+    color: #29201B;
+    padding: 10px;
+    overflow: hidden;
+    z-index: -5;
+    height: 50px;
+    font-family: "Dosis";
+}
+@keyframes bubblepop{
+    from{
+        width: 0px;
+        transform: translateX(-36px);
+    }
+    to{
+        width: calc(100% - 88px);
+        transform: translateX(0px);
+    }
+}
+#TchillySays p{
+    margin: 0;
+}
+#leftBuble{
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 36px;
+    z-index: -10;
+    background-color: #FFD584;
+}
+@keyframes leftbubblepop{
+    0%{
+        left: 50%;
+        opacity: 0;
+    }
+    1%{
+        opacity: 0;
+    }
+    2%{
+        opacity: 1;
+    }
+    100%{
+        left: 36px;
+    }
+}
+
+button{
+    font-family: 'Dosis';
+    border: none;
+    margin: 10%;
+    background-color: #33FF68;
+    color: #29201B;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    width: 80%;
+}
+button:active{
+    transform: scale(0.98);
+}
+
+#sceance{
+    width: 80%;
+    height: 55vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bandeau{
+    background-color: #9E7D57;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding: 5px;
+}
+
+#succes{
+    width: 80%;
+}
+.list-succes{
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px white solid;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.pourcent{
+    color: white;
+}
+
+/* Profil */
+#container_MenuProfil img{
+    width: 60%;
+    margin: -30px;
+}
+#container_MenuProfil button{
+    margin-top: 5px;
+    width: 25vw;
+}
+#infoUtil{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#modifierBtn{
+    transition: 0.5s ease;
+}
+#infoUtilmodif{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#infoUtilmodif input{
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 5px;
+    font-size: 15px;
+    padding: 2px;
+    text-align: center;
+}
+
+#preferences{
+ width: 70%;
+ height: 220px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: space-around;
+}
+#container_MenuProfil button.preferenceExo{
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+}
+
+/* Planning */
+
+.dayPlannig{ 
+    width: 70%;
+    border: 3px solid white;
+    background-color: white;
+    color: #29201B;
+    font-family: "Dosis-Light";
+    margin: 7px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+}
+.dayPlannig h2{
+    width: 25%;
+    float: left;
+}
+
+.containerplan{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+.circleplan{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #FFD584;
+    display: flex;
+}
+.circleplan img{
+    margin: auto;
+    width: 40px;
+}
+
+#plus{
+    width: 70px;
+    height: 70px;
+    background-color: #FFD584;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    display: flex;
+    z-index: 10;
+}
+#cross{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+#cross1{
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background-color: #29201B;
+    border-radius: 20px;
+    top: 30px;
+    
+}
+#cross2{
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: #29201B;
+    border-radius: 20px;
+    left: 30px;
+}
+
+#plusCount{ 
+    margin: auto;   
+    width: 80%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    color: #29201B;
+    font-family: "Dosis-Bold";
+}
+#plusCount img{
+    width: 28px;
+}
+
+.backdrop{
+    position: absolute;
+    top: 0px;
+    z-index: 2000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.Backcircleplan{
+    position: absolute;
+    left: calc(50% - 60px);
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #FFD584;
+    display: flex;
+}
+.Backcircleplan img{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes exoPiece{
+    0%{
+        bottom: -120px;
+    }
+    30%{
+        transform: rotateX(0deg) scale(1);
+    }
+    60%{
+        bottom: 60%;
+        transform: rotateX(180deg) scale(2);
+    }
+    80%{
+        transform: rotateX(360deg) scale(1.7);
+    }
+    100%{
+        bottom: 60%;
+        transform:scale(1);
+    }
+}
+
+/* Exercices */
+#ExoPagePrincipale{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+}
+#ExoPagePrincipale button{
+    background-color: #FFD584;
+    font-size: 20px;
+}
+
+.Exercices{
+    width: 40vw;
+    height: 40vw;
+    margin: 0;
+}
+#lastExos{
+    width: 90vw;
+    margin: 0;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trofit</title>
+</head>
+
+<style>
+    @font-face{
+        font-family: "Dosis-Light";
+        src: url("./media/fonts/Dosis-ExtraLight.ttf");
+    }
+    html{
+        background-color: #29201B;
+        margin: 0;
+        color: #33FF68;
+        font-family: "Dosis";
+    }
+    body{
+        margin: 0;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    h2, h1, h3{
+        margin: 0;
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+    #container{
+        height: 80vh;
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .box{
+        width: 45%;
+        height: 100%;
+        background-color: #FFD584;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px #000000 ;
+        color: #29201B;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 900px) {
+        #container{
+            width: 80vw;
+            height: auto;
+            flex-direction: column;
+        }
+        .box{
+            
+            margin-bottom: 10vw;
+            width: calc(100% - 20px);
+        }
+    }
+    .box h2{
+        color: #29201B;
+    }
+    .text{
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+    #tuto{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    a {
+        color: #29201B;
+        background-color: #33FF68;
+        border-radius: 50px;
+        text-align: center;
+    }
+</style>
+
+<body onresize="resize()">
+    <h1>Pour tester notre application, deux choix s'offrent à vous !</h1>
+    <h2>mais dans tous les cas utiliser un smartphone est plus pratique</h2>
+    <div id="container">
+        <div class="box" id="download">
+            <h2>Il est possible de télécharger l'APK :</h2>
+            <h3 class="text">Pour voir le résultat suite à l'export du projet Cordova, cliquez sur le bouton suivant. Si vous souhaitez essayer sur sur votre smartphone, allez probablement être confrontés à  diverses demandes d'autorisation.</h3>
+            <a href="./media/app-debug.apk" download="Trofit.apk">Télécharger l'APK</a>
+            <h2>Le code est disponible sur le GitHub :</h2>
+            <a href="Appli.html">Code source du projet Cordova</a>
+        </div>
+        <div class="box" id="browser">
+            <h2>Éxécuter l'application dans le navigateur :</h2>
+            <h3 class="text">Cette solution est la plus simple. Afin de pouvoir profiter pleinement de l'application, vous allez devoir utiliser l'outil de développement de votre navigateur web. Nous vous conseillosn d'utiliser un navigateurs suivants : Chrome, Firefox, Opera. Si vous n'y arrivez pas, pas de soucis, il vous suffit juste de redimensionner votre navigateur au dimensions d'un smartphone.</h3>
+            <div id="tuto">
+                <h3>appuyer sur F12 =></h3>
+                <img src="img/capture1.PNG" width="150px">
+                <h3>appuyer sur la tablette =></h3>
+                <img src="img/capture2.PNG" width="200px">
+            </div>
+            <a id="launch" href="Appli.html" style="display: none;">ALLER SUR L'APPLICATION VIA LE NAVIGATEUR</a>
+        </div>
+    </div>
+</body>
+<script>
+    resize();
+    function resize(){
+        if (document.body.offsetWidth <= 500){
+            document.getElementById('tuto').style.display ='none';
+            document.getElementById('launch').style.display ='block';
+        }else{
+            document.getElementById('tuto').style.display ='flex';
+            document.getElementById('launch').style.display ='none';
+        }
+    }
+</script>
+</html>
