@@ -4,7 +4,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
         <title>Trofit</title>
     </head>
     <body>
@@ -47,8 +47,8 @@
             <div id="leftBuble"></div>
           </div>
           
-          <button id="sceance" onclick=" ">
-            <div class="bandeau">prochaine sceance</div>
+          <button id="sceance" onclick="alert('not working')">
+            <div class="bandeau">prochaine seance</div>
             <h2>Fessier</h2>
             <span class="time">20 min</span>
             <h2 style="margin-top: 20px;">GO !</h2>
@@ -71,8 +71,8 @@
             </div>
             <div class="list-succes">
               <h3>X</h3>
-              <h3>faire 200 pompes</h3>
-              <span class="pourcent">80%</span>
+              <h3>faire 100 abdos</h3>
+              <span class="pourcent">54%</span>
             </div>
           </div>
         </div>
@@ -180,17 +180,66 @@
         <!-- exercices -->
         <div class="container" id="container_MenuExercices" style="display: none;">
           <div id="ExoPagePrincipale">
-            <button class="Exercices">BRAS</button>
-            <button class="Exercices">ABDOS</button>
-            <button class="Exercices">FESSIERS</button>
-            <button class="Exercices">JOGGING</button>
-            <button id="lastExos">Tous les exercices débloqués</button>
+            <button class="Exercices" onclick="alert('not working')">BRAS</button>
+            <button class="Exercices" onclick="alert('not working')">ABDOS</button>
+            <button class="Exercices" onclick="alert('not working')">FESSIERS</button>
+            <button class="Exercices" onclick="alert('not working')">JOGGING</button>
+            <button id="lastExos" onclick="alert('not working')">Tous les exercices débloqués</button>
           </div>
         </div>
 
         <!-- Succes -->
         <div class="container" id="container_MenuSucces" style="display: none;">
-          
+          <div id="succesContainer">
+            <button onclick="openSucces(0)" class="list-item-succes good">
+              <div class="view">
+                <h3>X</h3>
+                <h3>HELLO</h3>
+                <span class="pourcent">100%</span>
+              </div>
+              <div class="succes-info">Bravo tu à lancé pour la première fois l'application. Bienvenu, je compte sur toi pour donner le meilleur de toi !</div>
+            </button>
+            <button onclick="openSucces(1)" class="list-item-succes good">
+              <div class="view">
+                <h3>X</h3>
+                <h3>faire 100 pompes</h3>
+                <span class="pourcent">100%</span>
+              </div>
+              <div class="succes-info">Succès obtenu après avoir réalisé 100 pompes. C'est bien je vois que tu est motivé !</div>
+            </button>
+            <button onclick="openSucces(2)" class="list-item-succes">
+              <div class="view">
+                <h3>X</h3>
+                <h3>faire 200 pompes</h3>
+                <span class="pourcent">80%</span>
+              </div>
+              <div class="succes-info">Pour dévérouiller ce succès, il faut faire encore plus de pompes. Je vois que tu as réussis à en faire 100. Encore un effort !</div>
+            </button>
+            <button onclick="openSucces(3)" class="list-item-succes">
+              <div class="view">
+                <h3>X</h3>
+                <h3>faire 100 abdo</h3>
+                <span class="pourcent">20%</span>
+              </div>
+              <div class="succes-info">Pour dévérouiller ce succès, il faut faire plus d'abdos. Pour le moment il faut progresser !</div>
+            </button>
+            <button onclick="openSucces(4)" class="list-item-succes">
+              <div class="view">
+                <h3>X</h3>
+                <h3>finaliser 5 programmes</h3>
+                <span class="pourcent">20%</span>
+              </div>
+              <div class="succes-info">Pour dévérouiller ce succès, il faut suivre d'autres programmes jusqu'au bout. Allez du nerf tu à déjà commencé !</div>
+            </button>
+            <button onclick="openSucces(5)" class="list-item-succes">
+              <div class="view">
+                <h3>X</h3>
+                <h3>Premier Trophé</h3>
+                <span class="pourcent">00%</span>
+              </div>
+              <div class="succes-info">Pour dévérouiller ce succès, il faut réaliser ta première compétition. Si tu remporte le titre de champion, tu sera récompensé à ta juste valeur.</div>
+            </button>
+          </div>
         </div>
       </main>
     </body>

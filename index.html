@@ -76,11 +76,12 @@
         align-items: center;
         width: 100%;
     }
-    body a {
+    #container a {
         color: #29201B;
         background-color: #33FF68;
         border-radius: 50px;
         text-align: center;
+        text-decoration: none;
     }
 </style>
 
@@ -107,17 +108,17 @@
             <a id="launch" href="Appli.html" style="display: none;">ALLER SUR L'APPLICATION VIA LE NAVIGATEUR</a>
         </div>
     </div>
-</body>
+  </body>
 <script>
-    resize();
-    function resize(){
-        if (document.body.offsetWidth <= 500){
-            document.getElementById('tuto').style.display ='none';
-            document.getElementById('launch').style.display ='block';
-        }else{
-            document.getElementById('tuto').style.display ='flex';
-            document.getElementById('launch').style.display ='none';
-        }
-    }
+  resize();
+  function resize(){
+      if (document.body.offsetWidth <= 500){
+          document.getElementById('tuto').style.display ='none';
+          document.getElementById('launch').style.display ='block';
+      }else{
+          document.getElementById('tuto').style.display ='flex';
+          document.getElementById('launch').style.display ='none';
+      }
+  }
 </script>
 </html>

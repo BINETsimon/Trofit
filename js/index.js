@@ -11,7 +11,7 @@ function pop() {
 }
 
 var BurgerCheck = true;
-var previousId = 'MenuSucces';
+var previousId = 'MenuExercices';
 
 function burger() {
     BurgerTile = [document.getElementById('B1'), document.getElementById('B2'), document.getElementById('B3')];
@@ -60,7 +60,7 @@ function slideMenu(id) {
     if (id == 'MenuProfil'){Title.innerHTML = 'Profil'}
     if (id == 'MenuPlanning'){Title.innerHTML = 'Planning'}
     if (id == 'MenuExercices'){Title.innerHTML = 'Exercices'}
-    if (id == 'MenuSucces'){Title.innerHTML = 'Succes'}
+    if (id == 'MenuSucces'){Title.innerHTML = 'Succès'}
     
     firstID.fontWeight = '800';
     firstID.transform = 'scale(1.5)';
@@ -176,3 +176,15 @@ function addDay(selectedDay){
   }
 }
 
+/* Succès */
+var succesOpen = [false, false, false, false, false, false];
+function openSucces(nb) {
+  var succesInfo = document.getElementsByClassName('succes-info');
+  if (succesOpen[nb] == false){
+    succesInfo[nb].style.height = "auto";
+    succesOpen[nb] = true;
+  }else{
+    succesInfo[nb].style.height = "0px";
+    succesOpen[nb] = false;
+  }
+}
